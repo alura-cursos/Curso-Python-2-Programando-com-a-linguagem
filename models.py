@@ -17,7 +17,13 @@ class Perfil(object):
 
         def obter_curtidas(self):
             return self.__curtidas
-            
+
+class Perfil_Vip(Perfil):
+   'Classe padrão para perfis de usuários VIPs'
+
+   def obter_creditos(self):
+      return super(Perfil_Vip, self).obter_curtidas() * 10.0
+
 class Data(object):
    def __init__(self, dia, mes, ano):
       self.dia = dia
