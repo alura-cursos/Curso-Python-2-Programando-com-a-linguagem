@@ -19,14 +19,14 @@ class Perfil(object):
             return self.__curtidas
 
         @classmethod
-	    def gerar_perfis(classe, nome_arquivo):
-	        arquivo = open(nome_arquivo,'r')
-	        perfis = []
-	        for linha in arquivo:
-	          valores = linha.split(',')
-	          perfis.append(classe(*valores))
-	        arquivo.close()
-	        return perfis
+	def gerar_perfis(classe, nome_arquivo):
+	    arquivo = open(nome_arquivo,'r')
+	    perfis = []
+	    for linha in arquivo:
+	      valores = linha.split(',')
+	      perfis.append(classe(*valores))
+	    arquivo.close()
+	    return perfis
 
 class Perfil_Vip(Perfil):
     'Classe padrão para perfis de usuários VIPs'
